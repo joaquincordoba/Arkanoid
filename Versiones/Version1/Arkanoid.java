@@ -1,5 +1,6 @@
-package Arkanoid.Version2;
+package Arkanoid.Version1;
 
+import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -19,8 +20,8 @@ public class Arkanoid extends Canvas {
 	public static final int HEIGHT = 600;
 
 	public static final int SPEED = 60;
-	public int velox = 10;
-	public int veloy = 10;
+	public int velox = 5;
+	public int veloy = 5;
 	private long usedTime;
 	
 
@@ -33,10 +34,9 @@ public class Arkanoid extends Canvas {
 
 	public Arkanoid() {
 		JPanel panel = (JPanel) ventana.getContentPane();
-		setBounds(0, 0, WIDTH, HEIGHT);
-		panel.setPreferredSize(new Dimension(WIDTH, HEIGHT));
-		panel.setLayout(null);
-		panel.add(this);
+		
+		panel.setLayout(new BorderLayout());
+		panel.add(this, BorderLayout.CENTER);
 		ventana.setBounds(0, 0, WIDTH, HEIGHT);
 		ventana.setVisible(true);
 		ventana.addWindowListener(new WindowAdapter() {
@@ -45,7 +45,7 @@ public class Arkanoid extends Canvas {
 			}
 		});
 		ventana.setResizable(false);
-
+		
 		
 		
 		requestFocus();
@@ -70,10 +70,10 @@ public class Arkanoid extends Canvas {
 		this.pelota.xventana += velox;
 		this.pelota.yventana += veloy;
 		
-		if (this.pelota.xventana < 0 || this.pelota.xventana > this.getWidth()- this.pelota.alto) {
+		if (this.pelota.xventana < 0 || this.pelota.xventana > (this.getWidth()- this.pelota.ancho)) {
 			this.velox = -this.velox;
 		}
-		if (this.pelota.yventana < 0 || this.pelota.yventana > this.getHeight()- this.pelota.ancho) {
+		if (this.pelota.yventana < 0 || this.pelota.yventana > (this.getHeight()- this.pelota.alto)) {
 			this.veloy = -this.veloy;
 		}
 		

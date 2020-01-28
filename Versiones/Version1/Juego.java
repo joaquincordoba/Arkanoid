@@ -1,4 +1,4 @@
-package Arkanoid.Version2;
+package Arkanoid.Version1;
 
 public class Juego {
 

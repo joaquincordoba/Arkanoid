@@ -1,19 +1,19 @@
-package Arkanoid.Version2;
+package Arkanoid.Version1;
 
 public class Actor {
 
 	public int xventana;
 	public int yventana;
 	
-	public int alto , ancho;
+	public int ancho,alto;
 	
 	
 	
-	public Actor(int xventana,int yventana,int alto,int ancho) {
+	public Actor(int xventana,int yventana,int ancho,int alto) {
 		super();
 		this.xventana = xventana;
 		this.yventana = yventana;
-		this.alto = alto;
 		this.ancho = ancho;
+		this.alto = alto;
 	}
 }
