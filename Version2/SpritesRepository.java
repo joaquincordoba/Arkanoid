@@ -1,4 +1,4 @@
-package Arkanoid.Version1;
+package Arkanoid.Version2;
 
 import java.awt.image.BufferedImage;
 import java.net.URL;
