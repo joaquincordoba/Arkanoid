@@ -5,8 +5,7 @@ import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+
 
 /**
  * Clase que representa a la nave de nuestro juego
